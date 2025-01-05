@@ -1,6 +1,5 @@
 import { Outlet } from "@tanstack/react-router";
 import Header from "./components/Header";
-// import Footer from "./components/Footer";
 import { user } from "./data";
 import useLocalStorage from "./shared/useLocalStorage";
 import { useEffect } from "react";
@@ -22,8 +21,9 @@ const App = () => {
       <div className="sticky top-0 w-full z-50">
         <Header handleTheme={handleToggleTheme} theme={theme} />
       </div>
-      <main className="flex-grow">{/* <Outlet /> */}</main>
-      {/* <Footer /> */}
+      <main className="flex-grow">
+        <Outlet />
+      </main>
     </div>
   );
 };
