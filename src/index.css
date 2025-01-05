@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-jetbrainsMono: "JetBrains Mono", sans-serif;
+}
+
+[data-theme="light"] {
+  --primary-color: theme("colors.lightPrimary.DEFAULT");
+  --primary-color-darker: theme("colors.lightPrimary.dark");
+  --accent-default: theme("colors.lightAccent.DEFAULT");
+  --accent-hover: theme("colors.lightAccent.hover");
+  --gray: theme("colors.lightGray.DEFAULT");
+  --text-color: theme("colors.lightText.DEFAULT");
+  --text-secondary: theme("colors.lightText.secondary");
+  --text-muted: theme("colors.lightText.muted");
+}
+
+[data-theme="dark"] {
+  --primary-color: theme("colors.darkPrimary.DEFAULT");
+  --primary-color-darker: theme("colors.darkPrimary.dark");
+  --accent-default: theme("colors.darkAccent.DEFAULT");
+  --accent-hover: theme("colors.darkAccent.hover");
+  --gray: theme("colors.darkGray.DEFAULT");
+  --text-color: theme("colors.darkText.DEFAULT");
+  --text-secondary: theme("colors.darkText.secondary");
+  --text-muted: theme("colors.darkText.muted");
+}
+
+@layer base {
+  body {
+    @apply font-primary leading-loose;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+  }
+
+  section {
+    @apply container mx-auto;
+  }
+
+  h1 {
+    @apply text-5xl leading-[1.1] font-semibold;
+  }
+
+  h2 {
+    @apply text-2xl leading-[1.1] font-semibold;
+  }
+
+  h3 {
+    @apply text-xl leading-[1.1] font-semibold;
+  }
+
+  h4 {
+    @apply text-base  leading-[1.1];
+  }
+
+  .text-outline {
+    -webkit-text-stroke: 1.5px var(--text-color);
+    color: transparent;
+  }
+
+  .text-outline-hover {
+    -webkit-text-stroke: 2px var(--accent-hover);
+  }
+}
+
+/* 🖌️ Text Colors */
+.theme-text {
+  color: var(--text-color);
+}
+
+.theme-text-primary {
+  color: var(--primary-color);
+}
+
+.theme-text-secondary {
+  color: var(--text-secondary);
+}
+
+.theme-text-muted {
+  color: var(--text-muted);
+}
+
+.theme-text-accent {
+  color: var(--accent-default);
+}
+
+/* 🎨 Accent Colors */
+.theme-accent {
+  color: var(--accent-default);
+  border-color: var(--accent-default);
+}
+
+.theme-accent:hover {
+  color: var(--accent-hover);
+}
+
+/* 📝 Background Colors */
+.theme-bg {
+  background-color: var(--primary-color);
+}
+
+.theme-bg-darker {
+  background-color: var(--primary-color-darker);
+}
+
+.theme-bg-accent {
+  background-color: var(--accent-default);
+}
+
+.theme-bg-accent:hover {
+  background-color: var(--accent-hover);
+}
+
+/* 🌫️ Gray Utility */
+.theme-gray {
+  color: var(--gray);
+}
+
+.theme-gray-border {
+  border: 1px solid var(--gray);
+}
+
+.theme-bg-gray {
+  background-color: var(--gray);
+}
+
+/* 🪄 Buttons */
+.theme-button {
+  background-color: var(--accent-default);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.theme-button:hover {
+  background-color: var(--accent-hover);
+}
+
+.theme-button-accent {
+  background-color: var(--primary-color);
+  color: var(--accent-default);
+  border: 1px solid var(--accent-default);
+}
+
+.theme-button-accent:hover {
+  background-color: var(--accent-hover);
+  color: var(--primary-color);
+}
+
+.theme-tab-gray {
+  background-color: var(--gray);
+  color: var(--text-color);
+}
