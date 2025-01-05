@@ -22,9 +22,7 @@ const App = () => {
       <div className="sticky top-0 w-full z-50">
         <Header handleTheme={handleToggleTheme} theme={theme} />
       </div>
-      <main className="flex-grow">
-        <Outlet />
-      </main>
+      <main className="flex-grow">{/* <Outlet /> */}</main>
       {/* <Footer /> */}
     </div>
   );
