@@ -55,7 +55,7 @@ export const user = {
   designation: "Front-end Developer",
   email: "Shweta.navkar07@gmail.com",
   phone: "+91-7987023434",
-  yearsOfExperience: "3.5",
+  yearsOfExperience: "4",
   address: "Hyderabad",
   bio: "I transform ideas into responsive and interactive web applications that enhance user experiences.",
   stats: [
