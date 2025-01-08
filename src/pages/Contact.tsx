@@ -160,7 +160,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="theme-text-secondary">{item.title}</h3>
-                      <h2>
+                      <h2 className="text-base md:text-xl xl:text-3xl">
                         {item.description.includes("@") ? (
                           <a
                             href={`mailto:${item.description}`}
